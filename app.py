@@ -25,7 +25,7 @@ def download_calendar():
         cal.events.add(event)
 
     # Serialize the calendar to a string
-    calendar_data = str(cal)
+    calendar_data = cal.serialize()
 
     # Set response headers
     response = Response(content=calendar_data)
